@@ -15,13 +15,13 @@ Include screenshots to visually guide users on how to use your application.
 
 ### Home Page
 
-![Home Page](Screenshots/1.png)
+![Home Page](screenshots/1.png)
 
 - The home page where users can start the file upload process.
 
 ### File Selection
 
-![Upload Page](Screenshots/2.png)
+![Upload Page](screenshots/2.png)
 
 - The file upload page where users can select and upload files.
 
