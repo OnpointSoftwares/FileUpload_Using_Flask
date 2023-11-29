@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            {% block title %}
-        {% endblock %}
-        </title>
-        
-    </head>
-    <body>
-        <h1>Hi</h1> 
-        <form action="/upload" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <input type="submit" value="upload">
-        </form>
+
+<head>
+    <title>{% block title %}File Upload{% endblock %}</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Additional styles for the result block */
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            color: #3c763d;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>File Upload</h1>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <div id="result">
         {% block result %}
         {% endblock %}
-    </body>
+    </div>
+</body>
+
 </html>

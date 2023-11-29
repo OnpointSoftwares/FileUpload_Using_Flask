@@ -3,6 +3,6 @@
 Result
 {% endblock %}
 {% block result %}
-<img src="url_for('1.png')">
-{{ s }}
+    <img src="{{ url_for('static', filename=s) }}" alt="{{ url_for('static', filename='{{s}}') }}">
+    <p>{{ s }}</p>
 {% endblock %}
